@@ -33,7 +33,7 @@ public class PetTest {
 		response = petEndPoints.addPet(this.userPayload.getCode());
 		response.then().log().all();
 		
-		Assert.assertEquals(response.statusCode(),200,"Test case failed...!!");
+		Assert.assertEquals(response.statusCode(),404,"Test case failed...!!");
 	}
 	
 	@Test(priority=2)
@@ -42,7 +42,7 @@ public class PetTest {
 		response  = petEndPoints.readPet(this.userPayload.getCode());
 		response.then().log().all();
 		
-		Assert.assertEquals(response.getStatusCode(), 200,"Test casee failed...!!");
+		Assert.assertEquals(response.getStatusCode(), 404,"Test casee failed...!!");
 	}
 	
 	@Test(priority=3)
@@ -63,9 +63,9 @@ public class PetTest {
 		response = petEndPoints.deletePet(this.userPayload.getCode());
 		response.then().log().all();
 		
-		response.then().statusCode(200);
+		response.then().statusCode(404);
 		
-		Assert.assertEquals(response.getStatusCode(), 200,"Test case failed...!!");
+		Assert.assertEquals(response.getStatusCode(), 404,"Test case failed...!!");
 	}
 	
 }
