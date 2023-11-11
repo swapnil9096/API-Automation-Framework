@@ -6,7 +6,9 @@
       <class name="api.test.PetTest">
         <methods>
           <include name="setUp"/>
-          <include name="testDeletePet"/>
+          <include name="testUpdatePet"/>
+          <include name="testAddPet"/>
+          <include name="testReadPet"/>
         </methods>
       </class> <!-- api.test.PetTest -->
     </classes>
